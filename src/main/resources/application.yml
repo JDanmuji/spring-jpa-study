@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    #url: jdbc:h2:men:test --메모리 형
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa :
+    hibernate:
+      ddl-auto: create  #엔터티 정보를 다시 지우고 다시 다운로드 받음
+    properties:
+      hibernate:
+        #show_sql: true
+        format_sql: true
+
+#spring boot 의 경우 datasource, jpa가 없어도 자동적으로 메모리 형으로 동작하게 해준다.
+
+logging:
+  level:
+    org.hibernate.SQL: debug
